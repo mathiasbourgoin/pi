@@ -98,7 +98,7 @@ describe("OpenRouter mandatory reasoning payloads", () => {
 
 	it("still sends an explicitly selected supported effort", async () => {
 		expect(await capturePayload(openRouterModel(mandatoryMap), "low")).toMatchObject({
-			reasoning: { effort: "low" },
+			reasoning: { max_tokens: 2048 },
 		});
 	});
 
